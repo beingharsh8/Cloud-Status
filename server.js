@@ -6,9 +6,6 @@ const port = 3000
 
 app.use(cors());
 app.use(express.static('public'));
-app.use('/assets',
-  express.static('assets'));
-
 app.use(express.json());
 
 
