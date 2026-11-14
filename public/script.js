@@ -31,7 +31,7 @@ window.onload = () => {
 
 async function getWeather(cityName) {
 
-    const response = await fetch(`http://localhost:3000/weather?city=${cityName}`, {
+    const response = await fetch(`/weather?city=${cityName}`, {
         method: "GET",
     })
 
