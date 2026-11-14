@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins;
+    background: var(--bg);
+    color: white;
+    margin: 0px 100px;
+}
+
+
+header {
+    width: 100%;
+    padding: 20px;
+}
+
+:root {
+    --bg: whitesmoke;
+    --card: #ffffff;
+    --text: #000000;
+    --secondary: #adbcbe;
+    --outline: rgba(85, 85, 85, 0.5);
+}
+
+.dark {
+    --bg: #0f172a;
+    --card: #3b626e6c;
+    --text: #ffffff;
+    --secondary: #6b7280;
+    --outline: rgba(255, 255, 255, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.logo img {
+    width: 40px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+}
+
+.search input {
+    width: 320px;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.search button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.theme button {
+    font-weight: bold;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    outline: none;
+    padding: 5px 2px;
+    border-radius: 4px;
+}
+
+.theme button:hover {
+    background-color: var(--secondary);
+}
+
+.weathercard {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 300px;
+    background: var(--card);
+    border-radius: 15px;
+    padding: 20px;
+    background-image: url();
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: var(--text);
+    /* justify-content: center; */
+    gap: 50px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.location img {
+    height: 20px;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    /* gap: 15px; */
+    width: auto;
+    max-height: max-content;
+    background: var(--card);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.temp {
+    font-size: 48px;
+    font-weight: bolder;
+
+}
+
+.description {
+    color: var(--text);
+}
+
+.details {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid;
+    height: 70%;
+    font-size: clamp(6px, 18px, 4rem);
+
+
+}
+
+.card {
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* gap: px; */
+    border-right: 0.5px solid var(--outline);
+
+}
+
+.card div {
+    display: flex;
+    align-items: center;
+}
+
+.card p img {
+    height: 30px;
+}
+
+.card p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.feels {
+    border-right: none;
+}
+
+.sun {
+    border: 0.5px solid var(--outline);
+    height: 100%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* justify-content: center; */
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    color: var(--text);
+}
+
+.rise {
+    border-right: 0.5px solid rgba(85, 85, 85, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text);
+    font-weight: 500;
+    
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body {
+        /* margin-top: 10px; */
+        margin: 0;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .search {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search input,
+    .search button {
+        width: 100%;
+    }
+
+    .details {
+        gap: 10px;
+    }
+
+    .card {
+        border: 0.5px solid var(--outline);
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+
+    .weathercard,
+    .info {
+        width: 100%;
+        gap: 10px
+    }
+}
